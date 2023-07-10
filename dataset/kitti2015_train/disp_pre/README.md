@@ -1,1 +1,0 @@
-Disparity of previous frame
