@@ -17,7 +17,6 @@ import numpy as np
 import time
 import math
 import copy
-from dataloader import myloader15 as ls
 from dataloader import myloader as DA
 from matplotlib import pyplot as plt
 from err_calculation import *
@@ -28,6 +27,8 @@ from tqdm import tqdm
 parser = argparse.ArgumentParser(description='TANet')
 parser.add_argument('--maxdisp', type=int, default=192,
                     help='max disp')
+parser.add_argument('--dataset', default='kitti2015',
+                    help='datapath')
 parser.add_argument('--datapath', default='dataset/kitti2015_train/',
                     help='datapath')
 parser.add_argument('--epochs', type=int, default=500,
@@ -48,6 +49,15 @@ args.cuda = not args.no_cuda and torch.cuda.is_available()
 torch.manual_seed(args.seed)
 if args.cuda:
     torch.cuda.manual_seed(args.seed)
+  
+if args.dataset == 'kitti2012':
+    from dataloader import myloader12 as ls
+    args.datapath = 'dataset/kitti2012_train/'
+elif args.dataset == 'kitti2015':
+    from dataloader import myloader15 as ls
+    args.datapath = 'dataset/kitti2015_train/'
+else:
+    print('no dataset.')
 
 all_left_img, all_right_img, all_disp_pre_train, all_left_disp, test_left_img, test_right_img, test_disp_pre, test_disp = ls.dataloader(args.datapath)
 
