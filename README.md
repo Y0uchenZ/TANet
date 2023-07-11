@@ -3,11 +3,13 @@
 ## Contents
 
 1. [Introduction](#introduction)
-2. [Usage](#usage)
+2. [Architecture](#architecture)
+3. [Usage](#usage)
 
 ## Introduction
 
 We propose a fast stereo matching network based on temporal attention and 2D convolution (TANet). Due to the high similarity of the disparity between consecutive frames in an image sequence, we propose a temporal attention (TA) module that uses the disparity map of the previous frame to guide the disparity search range in the current frame, thus significantly improving the efficiency of disparity calculation in the cost volume module. Additionally, we propose a hierarchical cost construction and 2D convolution aggregation module that constructs a pyramid cost volume by fusing edge cues to establish detail constraints. This overcomes the problem of difficult convergence caused by information loss when replacing 3D convolution with 2D convolution. Experimental results show that the TA module effectively optimizes the cost volume and, together with 2D convolution, improves the computational speed. Compared with state-of-the-art algorithms, TANet achieves a speedup of nearly 4x, with a running time of 0.061s, and reduces the parameter count by nearly half while decreasing accuracy by 1.1%. 
+
 
 ## Architecture
 
