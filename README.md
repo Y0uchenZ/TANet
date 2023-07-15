@@ -1,5 +1,9 @@
 # **A Fast Stereo Matching Network Based on Temporal Attention and 2D Convolution**  
 
+This repository contains the implementation of the paper: [A Fast Stereo Matching Network Based on Temporal Attention and 2D Convolution](https://doi.org/10.1016/j.patcog.2023.109808), Youchen Zhao, Hua Zhong*, Boyuan Jia, Haixiong Li (Pattern Recognition).
+
+
+
 ## Contents
 
 1. [Introduction](#introduction)
