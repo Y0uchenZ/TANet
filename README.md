@@ -3,7 +3,7 @@
 This repository contains the implementation of the paper: [A Fast Stereo Matching Network Based on Temporal Attention and 2D Convolution](https://doi.org/10.1016/j.patcog.2023.109808), Youchen Zhao, Hua Zhong*, Boyuan Jia, Haixiong Li (Pattern Recognition).
 
 ### Citation
-'''
+```
 @article{zhao2023fast,
   title={A fast stereo matching network based on temporal attention and 2D convolution},
   author={Zhao, Youchen and Zhong, Hua and Jia, Boyuan and Li, Haixiong},
@@ -13,7 +13,7 @@ This repository contains the implementation of the paper: [A Fast Stereo Matchin
   year={2023},
   publisher={Elsevier}
 }
-'''
+```
 
 ## Contents
 
